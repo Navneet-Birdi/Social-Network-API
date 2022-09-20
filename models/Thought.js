@@ -2,13 +2,14 @@ const { Schema, model, Types } = require('mongoose');
 
 
 const reactionSchema = new Schema({
-  
+  //reaction body
   body: {
     type: String,
     required: true,
     minLength: 1,
     maxLength: 280,
   },
+  //reaction username
   username: {
     type: String,
     required: true,
@@ -17,8 +18,6 @@ const reactionSchema = new Schema({
 }, {
   timestamps: true,
 })
-
-
 
 // Schema to create a thought model
 const thoughtSchema = new Schema(
